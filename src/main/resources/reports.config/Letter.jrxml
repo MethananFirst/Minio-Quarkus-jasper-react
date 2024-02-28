@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LetterTemplate" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f604a1d-21bf-42cf-a398-0d62a2dc5173">
+    <parameter name="senderAddress" class="java.lang.String"/>
+    <parameter name="date" class="java.lang.String"/>
+    <parameter name="recipientName" class="java.lang.String"/>
+    <parameter name="recipientAddress" class="java.lang.String"/>
+    <parameter name="salutation" class="java.lang.String"/>
+    <parameter name="content1" class="java.lang.String"/>
+    <parameter name="content2" class="java.lang.String"/>
+    <parameter name="content3" class="java.lang.String"/>
+    <parameter name="closing" class="java.lang.String"/>
+    <parameter name="signature" class="java.lang.String"/>
+    <detail>
+        <band height="802" splitType="Stretch">
+            <textField textAdjust="StretchHeight">
+                <reportElement x="380" y="30" width="175" height="30" uuid="01c5c46f-4b07-457f-9dcf-d0593d21e28c"/>
+                <textFieldExpression><![CDATA[$P{senderAddress}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement x="380" y="70" width="175" height="20" uuid="d15890a5-06ec-492d-a0c2-09b8f8a1bc0c"/>
+                <textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement x="0" y="140" width="180" height="20" uuid="d8f13ef5-eccf-4701-bfa3-c983c01a3438"/>
+                <textFieldExpression><![CDATA[$P{recipientName}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement x="0" y="170" width="180" height="20" uuid="0b977fc3-5e1d-485d-b885-9645f37010e7"/>
+                <textFieldExpression><![CDATA[$P{recipientAddress}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement x="0" y="200" width="180" height="20" uuid="2e46486c-05b9-498d-8c0e-92da20447315"/>
+                <textFieldExpression><![CDATA["Salutation: " + $P{salutation}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement x="0" y="230" width="555" height="20" uuid="23961f78-e0ee-4a6e-8691-02153b92c496"/>
+                <textFieldExpression><![CDATA["    " + $P{content1}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement x="456" y="540" width="99" height="20" uuid="ed7dd0ef-746f-4a0e-baf5-777464105df6"/>
+                <textFieldExpression><![CDATA[$P{closing}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement x="456" y="570" width="99" height="20" uuid="ed7dd0ef-746f-4a0e-baf5-777464105df6"/>
+                <textFieldExpression><![CDATA[$P{signature}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement x="0" y="330" width="555" height="80" uuid="521d0c9c-b8b2-493a-ad7c-477bc8e55bc3"/>
+                <textFieldExpression><![CDATA["    " + $P{content2}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement x="0" y="430" width="555" height="79" uuid="521d0c9c-b8b2-493a-ad7c-477bc8e55bc3"/>
+                <textFieldExpression><![CDATA["    " + $P{content3}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>
